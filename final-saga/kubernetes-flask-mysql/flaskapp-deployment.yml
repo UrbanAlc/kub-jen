@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: flaskapi
-          image: alperenyuksel/flask-api:45
+          image: alperenyuksel/flask-api: 4875643
           ports:
             - containerPort: 5000
           env:
