@@ -23,9 +23,10 @@ def index():
 @app.route("/alp/<int:sayi>")
 def fakt(sayi):
     fakt = 1
-    for i in range(2,sayi):
-        fakt *=i
-    return fakt
+    for i in range(1, sayi + 1):
+        fakt *= i
+    return str(fakt)
+
 @app.route('/health')
 def health_check():
     try:
