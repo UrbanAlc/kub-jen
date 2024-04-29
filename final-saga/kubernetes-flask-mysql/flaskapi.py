@@ -19,7 +19,7 @@ mysql.init_app(app)
 @app.route("/")
 def index():
     """Function to test the functionality of the API"""
-    return "hata nerede ?"
+    return "alperen deneme"
 @app.route("/selamker/<int:user_id>", methods=["GET"])
 def user(user_id):
     """Function to get information of a specific user in the MSQL database"""
