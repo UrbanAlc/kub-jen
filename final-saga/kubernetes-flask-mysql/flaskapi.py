@@ -16,7 +16,7 @@ app.config["MYSQL_DATABASE_PORT"] = 3306
 mysql.init_app(app)
 
 @app.route("/test")
-def index():
+def test1():
     """Function to test the functionality of the API"""
     return "Test"
 @app.route("/")
