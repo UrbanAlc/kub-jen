@@ -87,24 +87,6 @@ def users():
     except Exception as exception:
         return jsonify(str(exception))
 
-
-@app.route("/user/<int:user_id>", methods=["GET"])
-def user(user_id):
-    """Function to get information of a specific user in the MSQL database"""
-    try:
-        conn = mysql.connect()
-        cursor = conn.cursor()
-        cursor.execute("SELECT * FROM users WHERE user_id=%s", user_id)
-        row = cursor.fetchone()
-        cursor.close()
-        conn.close()
-        resp = jsonify(row)
-        resp.status_code = 200
-        return resp
-    except Exception as exception:
-        return jsonify(str(exception))
-
-
 @app.route("/update", methods=["POST"])
 def update_user():
     """Function to update a user in the MYSQL database"""
