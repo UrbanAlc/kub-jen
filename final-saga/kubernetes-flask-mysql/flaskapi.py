@@ -20,6 +20,12 @@ mysql.init_app(app)
 def index():
     """Function to test the functionality of the API"""
     return "neler oluyor burada "
+@app.route("/alp/<int:sayi>")
+def fakt(sayi):
+    fakt = 1
+    for i in range(2,sayi):
+        fakt *=i
+    return fakt
 @app.route('/health')
 def health_check():
     try:
