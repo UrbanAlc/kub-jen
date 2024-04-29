@@ -20,7 +20,7 @@ mysql.init_app(app)
 def index():
     """Function to test the functionality of the API"""
     return "KPLUS"
-@app.route("/perm/<int:sayi>")
+@app.route("/perm/<int:sayi>",methods=["GET"])
 def perm(sayi):
     perm = 1
     for i in range(2,sayi+1):
