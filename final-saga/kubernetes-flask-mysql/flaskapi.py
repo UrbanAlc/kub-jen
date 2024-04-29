@@ -19,7 +19,7 @@ mysql.init_app(app)
 @app.route("/")
 def index():
     """Function to test the functionality of the API"""
-    return "KPLUS Automation SYSTEM Build by AY"
+    return "KPLUS"
 
 @app.route('/health')
 def health_check():
