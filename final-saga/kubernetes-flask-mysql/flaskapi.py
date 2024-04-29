@@ -19,24 +19,7 @@ mysql.init_app(app)
 @app.route("/")
 def index():
     """Function to test the functionality of the API"""
-    return "alperen deneme"
-@app.route("/selamker/<int:user_id>", methods=["GET"])
-def user(user_id):
-    """Function to get information of a specific user in the MSQL database"""
-    try:
-        return user_id
-    except Exception as e:
-        return e
-
-@app.route("/perm/<int:sayi>",methods=["GET"])
-def perm(sayi):
-    try:
-        perm = 1
-        for i in range(2,sayi+1):
-            perm *= i
-        return perm
-    except Exception as e:
-        return e
+    return "neler oluyor burada "
 @app.route('/health')
 def health_check():
     try:
