@@ -19,7 +19,15 @@ mysql.init_app(app)
 @app.route("/")
 def index():
     """Function to test the functionality of the API"""
-    return "KPLUS"
+    return "hata nerede ?"
+@app.route("/selamker/<int:user_id>", methods=["GET"])
+def user(user_id):
+    """Function to get information of a specific user in the MSQL database"""
+    try:
+        return user_id
+    except Exception as e:
+        return e
+
 @app.route("/perm/<int:sayi>",methods=["GET"])
 def perm(sayi):
     try:
