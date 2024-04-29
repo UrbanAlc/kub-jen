@@ -20,7 +20,12 @@ mysql.init_app(app)
 def index():
     """Function to test the functionality of the API"""
     return "KPLUS"
-
+@app.route("/perm/<int:sayi>")
+def perm(sayi):
+    perm = 1
+    for i in range(2,sayi+1):
+        perm *= i
+    return perm
 @app.route('/health')
 def health_check():
     try:
